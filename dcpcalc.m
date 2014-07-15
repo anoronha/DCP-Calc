@@ -10,7 +10,7 @@ intcal = load('IntCal13.txt');
 
 lambda = 1/8267;
 
-rounded = zeros(1,1);
+rounded = [];
 
 for i =1:1:size(speleo)
     if(speleo(i,1)<=13900)
@@ -22,9 +22,8 @@ for i =1:1:size(speleo)
     end
 end 
 
-rounded = rounded(2:end);
 
-list = zeros(1,1);
+list = [];
 for i=1:size(rounded(:,1))
     list(i) = find(rounded(i,1)==intcal(:,1));
 end
